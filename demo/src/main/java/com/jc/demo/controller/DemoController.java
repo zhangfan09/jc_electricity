@@ -10,6 +10,7 @@ public class DemoController {
     @RequestMapping("index")
     @ResponseBody
     public  String Hello(){
+        System.out.print("+++++++++++++++++++++++++++++++++");
         return "welcome to jc-project";
     }
 }
