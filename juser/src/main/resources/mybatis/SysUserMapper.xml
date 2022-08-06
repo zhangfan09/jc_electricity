@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jc.juser.dao.SysUserMapper" >
+  <resultMap id="BaseResultMap" type="com.jc.juser.pojo.SysUser" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="pk_user" property="pkUser" jdbcType="CHAR" />
+    <result column="CUSERID" property="cuserid" jdbcType="CHAR" />
+    <result column="USER_CODE" property="userCode" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="OPERAT_TIME" property="operatTime" jdbcType="CHAR" />
+    <result column="OPERAT_DATE" property="operatDate" jdbcType="CHAR" />
+    <result column="PK_ROLE" property="pkRole" jdbcType="CHAR" />
+    <result column="PK_DEPT" property="pkDept" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    pk_user ,cuserid,user_code,user_code,user_name,operat_time,operat_date,pk_role,pk_dept
+  </sql>
+  <!--查询当前所有用户-->
+  <select id="queryUserList"  resultType="com.jc.juser.pojo.SysUser">
+    select
+    <include refid="Base_Column_List"/>
+    from sys_user
+    <!--<where>
+      1=1
+      /*and user_name = #{USER_NAME}*/
+      &lt;!&ndash;<if test="user_name != null and user_name == '张三' "></if>&ndash;&gt;
+
+
+    </where>-->
+  </select>
+
+  <!--添加用户-->
+<!--  <insert id="addUserMessage" parameterType="pojo.SysUser">
+    insert into sys_user(CUSERID, USER_CODE, USER_NAME, OPERAT_TIME, OPERAT_DATE)
+    values (#{CUSERID}, #{USER_CODE}, #{USER_NAME}, #{OPERAT_TIME}, #{OPERAT_DATE})
+  </insert>-->
+
+  <!--更新用户-->
+ <!-- <update id="updateUserMessage" parameterType="pojo.SysUser">
+    update sys_user
+    set USER_NAME=#{USER_NAME},
+        USER_CODE=#{USER_CODE},
+        OPERAT_TIME = #{OPERAT_TIME},
+        OPERAT_DATE = #{OPERAT_DATE}
+    where id = #{CUSERID}
+  </update>-->
+
+  <!--删除用户-->
+  <!--<delete id="deleteUserById" parameterType="int">
+    delete from sys_user where CUSERID = #{CUSERID}
+  </delete>-->
+
+</mapper>

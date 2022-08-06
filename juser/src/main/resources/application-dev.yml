@@ -1,0 +1,35 @@
+
+#server
+#server:
+#  port: 8081
+#  servlet:
+#    context-path: /springbootmybatis
+
+#spring
+#spring:
+#  application:
+#    name: springbootmybatis
+
+#spring:
+#  mvc:
+#    view:
+#      prefix: /
+#      suffix: .jsp
+
+#  thymeleaf:
+#    mode: LEGACYHTML5
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    encoding: UTF-8
+
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/jc_sit?setunicode=true&characterencoding=utf8
+      username: root
+      password: root
+    kjdbf:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=KJ968DBF
+      username: sa
+      password: 123
